@@ -1,34 +1,36 @@
 package com.bridgelabz;
 
-public class DeckOfCard {
+import java.util.ArrayList;
 
-	private String[] suits = { "Clubs", "Diamonds", "Hearts", "Spades" };
-	private String[] ranks = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
-	int card = suits.length * ranks.length;
+public class DeckOfCard extends Players {
+
+public ArrayList<String> cardsDeck = new ArrayList<>();
 	
-	String[] deckCard() {
-		String[] deck = new String[this.card];
-		for (int i = 0; i < ranks.length; i++) {
-			for (int j = 0; j < suits.length; j++) {
-				deck[suits.length * i + j] = ranks[i] + " of " + suits[j];
-				System.out.println(deck[suits.length * i + j]);
-			}
-		}
-		
-		for (int i = 0; i < card; i++) {
-			int r = i + (int) (Math.random() * (card - i));  //random card 
-			//System.out.println(r);
-			String temp = deck[r];
-			deck[r] = deck[i];
-			deck[i] = temp;
-		}
-		return deck;
+	public void deckOfCards() {
+    String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
+    
+    String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "King", "Queen", "Ace"};
+    
+    int numOfCards = suits.length * ranks.length;
+   
+    
+    System.out.println("\nNumber of cards in the deck is : " +numOfCards);
+    
+    // First we have to itterate for loop for ranks starting from index 0.
+    for (int i = 0; i < ranks.length; i++) {
+
+        for (int j = 0; j < suits.length; j++) {
+            
+            cardsDeck.add(ranks[i] + " " + suits[j]);
+        }
+    }
 	}
 	
 	public static void main(String[] args) {
 	    
 		DeckOfCard cards = new DeckOfCard();
-		cards.deckCard();
+		cards.deckOfCards();
+		cards.noOfPlayers();
 
 	}
 	
