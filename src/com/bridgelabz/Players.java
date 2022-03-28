@@ -20,7 +20,12 @@ public class Players {
 	            System.out.println("Please enter number of players in the Range");
 	            
 	            noOfPlayers();   
-	        }  
-	        
-	    }
+	        }     
+	  }
+	 
+	 public static void sequenceOfPlay(int player) {
+	        for (int i = 1; i <= player; i++) {
+	            System.out.println("Player " + i + " Getting card:");
+	        }
+	 }       
 }

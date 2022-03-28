@@ -25,8 +25,7 @@ public ArrayList<String> cardsDeck = new ArrayList<>();
 
         }
     }
-	}
-	
+  }
 	public static void main(String[] args) {
 	    
 		DeckOfCard cards = new DeckOfCard();
@@ -34,5 +33,6 @@ public ArrayList<String> cardsDeck = new ArrayList<>();
 		cards.noOfPlayers();
 
 	}	
+
 
 }
