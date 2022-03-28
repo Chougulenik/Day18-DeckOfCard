@@ -2,9 +2,10 @@ package com.bridgelabz;
 
 import java.util.ArrayList;
 
-public class DeckOfCard {
+public class DeckOfCard extends Players {
 
-	public ArrayList<String> cardsDeck = new ArrayList<>();
+public ArrayList<String> cardsDeck = new ArrayList<>();
+
 	
 	public void deckOfCards() {
     String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
@@ -20,8 +21,8 @@ public class DeckOfCard {
     for (int i = 0; i < ranks.length; i++) {
 
         for (int j = 0; j < suits.length; j++) {
-            
-            cardsDeck.add(ranks[i] + "----->" + suits[j]);
+            cardsDeck.add(ranks[i] + " " + suits[j]);
+
         }
     }
 	}
@@ -30,9 +31,8 @@ public class DeckOfCard {
 	    
 		DeckOfCard cards = new DeckOfCard();
 		cards.deckOfCards();
-		
+		cards.noOfPlayers();
 
-	}
-	
+	}	
 
 }
