@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class DeckOfCard extends Players {
 
 public ArrayList<String> cardsDeck = new ArrayList<>();
+
 	
 	public void deckOfCards() {
     String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
@@ -20,12 +21,18 @@ public ArrayList<String> cardsDeck = new ArrayList<>();
     for (int i = 0; i < ranks.length; i++) {
 
         for (int j = 0; j < suits.length; j++) {
-            
             cardsDeck.add(ranks[i] + " " + suits[j]);
+
         }
     }
-	}
-	
-	
+  }
+	public static void main(String[] args) {
+	    
+		DeckOfCard cards = new DeckOfCard();
+		cards.deckOfCards();
+		cards.noOfPlayers();
+
+	}	
+
 
 }
